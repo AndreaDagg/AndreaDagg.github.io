@@ -8,8 +8,8 @@
   --font_size: 16px;
 
   /* You can change the background color by typing the color code. (If you do not enter a background-image image, the background-color will be active.) */
-  --background_color: #cd2828;
-  --background_image: url("https://loading.io/asset/667675");
+  --background_color: #1a1919;
+  --background_image: url("Moon.svg");
 
   /* You can change the frame thickness and color of the picture by typing the number of pixels and the color code. */
   --image_border_color: #1f232e;
