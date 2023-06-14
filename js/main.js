@@ -13,3 +13,5 @@ targets.forEach(element => {
     target.style.display= 'flex'
   })
 })
+
+alert("WebSite under costruction!");
