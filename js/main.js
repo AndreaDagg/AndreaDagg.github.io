@@ -14,4 +14,4 @@ targets.forEach(element => {
   })
 })
 
-alert("WebSite under costruction!");
+alert("WebSite under construction!");
