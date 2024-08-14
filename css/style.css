@@ -261,7 +261,7 @@ main {
 
 /* Responsive Codes */
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
   .main_text_item {
     width: 92vw;
   }
@@ -390,4 +390,27 @@ main {
 
 .hidden {
   display: none;
+}
+
+/* style div progetti */
+/* Regole di base */
+#container img, #container iframe {
+  width: 100%;
+  height: auto;
+}
+
+/* Media Query per dispositivi mobili */
+@media (max-width: 768px) {
+  #container {
+    margin-top: 10vh;
+  }
+
+  #container .justify-content-center {
+    max-width: 90%;
+  }
+
+  #container iframe {
+    height: auto; /* Mantiene le proporzioni */
+    aspect-ratio: 16/9;
+  }
 }
