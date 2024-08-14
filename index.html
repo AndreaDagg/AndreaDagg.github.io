@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-</head>
-<body>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,19 +9,31 @@
   <meta property="og:title" content="links-website" />
   <meta property="og:description" content="List all your links on one website." />
   <meta property="og:image" content="img/logo.png" />
-  <meta property="og:author" content="John Doe" />
+  <meta property="og:author" content="Andrea D'Aguanno" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&amp;display=swap">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/x-icon" href="img/Senza titolo-2.png">
 
-
 </head>
+
 <body>
 <!-- Video Background -->
 <video autoplay muted loop id="backgroundVideo">
   <source src="img/STARTRAIO2k.mp4" type="video/mp4">
 </video>
+
+<div id="overlay">
+  <div id="overlayContent">
+    <h3 style="padding-bottom: 2vh; font-size: large">Guarda il mio nuovo video</h3>
+    <h1 style="padding-bottom: 2vh; font-size: xx-large">~ Walking around Prague ~</h1>
+    <a href="https://www.youtube.com/watch?v=oHBUGTpRsDs&t=1s" target="_blank">
+      <button id="watchVideoButton">Guarda il Video</button>
+    </a>
+    <button id="skipOverlayButton">Skip</button>
+  </div>
+</div>
+
 
 <header>
   <!-- Logo, Title and Description Codes Start -->
@@ -119,40 +123,29 @@
 </section>
 
 
-<section id="container" style=" position: relative; margin-top: 90vh;">
-  <div class="justify-content-center">
-    <a  href="https://www.nadiadaguanno.com" target="_blank">
+<section id="container" style="display: flex; flex-direction: column; align-items: center; margin-top: 90vh;">
+  <div class="justify-content-center" style="width: 100%; max-width: 70%; margin-bottom: 20px;">
+    <a href="https://www.nadiadaguanno.com" target="_blank">
       <img src="img/Screenshot_Nad.png" alt="Andrea D'Aguanno" class="img" style="
-              position: relative;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50vh);
-              max-width: 70%;
-              max-height: 70%;
-              border-radius: 2%;">
+              width: 100%;
+              height: 720px;
+              ">
     </a>
   </div>
-  <div class="justify-content-center" style="margin-top: 10vh;">
-    <a  href="https://gendomanalisi1.altervista.org/" target="_blank">
-      <img src="img/screencapture-gendomanalisi1-altervista-org-firstChoice-php-2023-06-15-12_53_54.png" alt="Andrea D'Aguanno" class="img" style="
-              position: relative;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50vh);
-              max-width: 70%;
-              max-height: 70%;
-              border-radius: 2%;">
-    </a>c
+  <div class="justify-content-center" style="width: 100%; max-width: 70%;">
+    <iframe width="100%" height="720" src="https://www.youtube-nocookie.com/embed/oHBUGTpRsDs?si=JcUF5QLPZC_RBNPU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 </section>
+
 
 <footer>
   <!-- Footer Codes Start -->
   <div class="footer_div_item flex_row_center">
-    <a class="footer_a_item" href="#link">Andrea D'Aguanno</a>&nbsp;| 2023
+    <a class="footer_a_item" href="#link">Andrea D'Aguanno</a>&nbsp;| 2024
   </div>
 </footer>
 <!-- Footer Codes End -->
 <script src="js/main.js"></script>
+<script src="js/disapper_banner.js"></script>
 </body>
 </html>
