@@ -1,6 +1,6 @@
-import { profile, socialLinks } from '../data/portfolioData';
-import { icon } from '../components/icons';
-import { assetUrl, escapeHtml as e, safeUrl } from '../utils/html';
+import { profile, socialLinks } from '../data/portfolioData.js';
+import { icon } from '../components/icons.js';
+import { assetUrl, escapeHtml as e, safeUrl } from '../utils/html.js';
 
 const tags = values => `<ul class="tags">${values.map(value => `<li>${e(value)}</li>`).join('')}</ul>`;
 const externalLink = (url, label) => safeUrl(url) ? `<a class="text-link" href="${safeUrl(url)}" target="_blank" rel="noopener noreferrer">${e(label)} ${icon('arrow')}<span class="sr-only"> (nuova scheda)</span></a>` : '';

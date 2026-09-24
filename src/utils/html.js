@@ -11,7 +11,9 @@ export function safeUrl(value) {
 }
 
 export function assetUrl(path) {
-  const base = new URL(import.meta.env.BASE_URL, document.baseURI);
+  const baseUrl = import.meta.env?.BASE_URL ?? '/';
+  const documentBase = typeof document === 'undefined' ? 'http://localhost/' : document.baseURI;
+  const base = new URL(baseUrl, documentBase);
   return new URL(String(path).replace(/^\/+/, ''), base).href;
 }
 

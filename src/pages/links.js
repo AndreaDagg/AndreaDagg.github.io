@@ -1,4 +1,4 @@
-import { socialLinks, featuredLinks } from '../data/portfolioData';
+import { socialLinks, featuredLinks } from '../data/portfolioData.js';
 import { icon } from '../components/icons';
 import { assetUrl, escapeHtml, safeUrl, srcset } from '../utils/html';
 import photos from '../generated/photos.json';
