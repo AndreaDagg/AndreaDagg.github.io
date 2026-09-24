@@ -351,3 +351,13 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 .idea
+
+# Portfolio build and local tools
+dist/
+public/generated/
+src/generated/
+.tools/
+.cache/
+playwright-report/
+test-results/
+.env.local

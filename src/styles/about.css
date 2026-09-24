@@ -1,0 +1,42 @@
+.about-page { max-width: 1160px; margin-inline: auto; }
+.about-heading { display: grid; grid-template-columns: 1fr 340px; gap: 70px; align-items: center; padding-block: 75px; }
+.about-heading h1 { font-size: clamp(62px, 7vw, 105px); margin-top: 24px; }
+.about-name { font-size: 22px; margin-top: 30px; letter-spacing: -.035em; }
+.about-intro { color: var(--muted); max-width: 500px; margin-top: 12px; }
+.about-portrait img { width: 100%; height: auto; }
+.about-portrait figcaption { padding-top: 14px; color: var(--muted); }
+.resume-section { display: grid; grid-template-columns: 260px 1fr; gap: 50px; border-top: 1px solid var(--line); padding-block: 42px; }
+.resume-section > h2 { display: flex; align-items: baseline; gap: 24px; font-size: 23px; }
+.resume-section > h2 .eyebrow { font-size: 10px; }
+.resume-content { min-width: 0; }
+.resume-content p { color: var(--muted); }
+.resume-lead { font-size: 20px; max-width: 640px; line-height: 1.6; }
+.resume-entry + .resume-entry { border-top: 1px solid var(--line); padding-top: 30px; margin-top: 30px; }
+.resume-entry h3 { margin-bottom: 12px; }
+.resume-entry > .eyebrow { margin-bottom: 15px; }
+.resume-entry .entry-organization { color: var(--text); margin-bottom: 12px; }
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 20px; }
+.project-card { padding: 27px; border: 1px solid var(--line); background: var(--surface); }
+.project-card h3 { margin-block: 25px 15px; }
+.project-card p { font-size: 14px; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tags li { padding: 6px 12px; border: 1px solid #454c3d; border-radius: 3px; font-size: 11px; color: #c3cdb6; overflow-wrap: anywhere; }
+.project-card .tags { margin-top: 25px; }
+.project-links { display: flex; flex-wrap: wrap; gap: 20px; }
+.project-links:not(:empty) { margin-top: 20px; }
+.contact-links { margin-top: 25px; display: flex; gap: 25px; flex-wrap: wrap; align-items: center; }
+.contact-links p { width: 100%; font-size: 13px; }
+.resume-content, .about-intro { overflow-wrap: anywhere; }
+@media (max-width: 1000px) {
+  .about-heading { grid-template-columns: 1fr 260px; gap: 35px; }
+  .resume-section { grid-template-columns: 190px 1fr; gap: 25px; }
+}
+@media (max-width: 700px) {
+  .about-heading { padding-block: 48px; grid-template-columns: 1fr; gap: 35px; }
+  .about-heading h1 { font-size: 76px; }
+  .about-portrait { width: min(100%, 340px); }
+  .resume-section { grid-template-columns: 1fr; gap: 26px; padding-block: 30px; }
+  .resume-section > h2 { font-size: 22px; }
+  .resume-lead { font-size: 18px; }
+  .project-card { padding: 24px; }
+}
