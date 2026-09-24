@@ -6,6 +6,7 @@ import { renderLinks } from './pages/links';
 import { renderPhotography, mountPhotography } from './pages/photography';
 import { renderAbout, mountAbout } from './pages/about-selector';
 import { renderMusic } from './pages/music';
+import logoAnimationUrl from './assets/logo/logoAnimation.mp4';
 
 const routes = {
   links: { title: 'Links', render: renderLinks },
@@ -39,11 +40,14 @@ document.querySelector('.skip-link').addEventListener('click', event => {
   event.preventDefault();
   main.focus();
 });
+document.querySelectorAll('video.boot-loader-video, video.wordmark-video').forEach(video => {
+  video.src = logoAnimationUrl;
+});
 const bootLoader = document.querySelector('#boot-loader');
 window.addEventListener('load', () => {
   window.setTimeout(() => {
     bootLoader?.classList.add('is-hidden');
-  }, 2000);
+  }, 3000);
 }, { once: true });
 window.addEventListener('hashchange', () => navigate());
 navigate(true);

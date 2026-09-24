@@ -11,7 +11,8 @@ export function safeUrl(value) {
 }
 
 export function assetUrl(path) {
-  return new URL(path, new URL('.', document.baseURI)).href;
+  const base = new URL(import.meta.env.BASE_URL, document.baseURI);
+  return new URL(String(path).replace(/^\/+/, ''), base).href;
 }
 
 export function srcset(photo, maxWidth = Infinity) {
