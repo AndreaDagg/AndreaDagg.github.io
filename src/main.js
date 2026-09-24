@@ -4,13 +4,13 @@ import './styles/photography.css';
 import './styles/about.css';
 import { renderLinks } from './pages/links';
 import { renderPhotography, mountPhotography } from './pages/photography';
-import { renderAbout } from './pages/about';
+import { renderAbout, mountAbout } from './pages/about-selector';
 import { renderMusic } from './pages/music';
 
 const routes = {
   links: { title: 'Links', render: renderLinks },
   photography: { title: 'Photography', render: renderPhotography, mount: mountPhotography },
-  about: { title: 'About', render: renderAbout },
+  about: { title: 'About', render: renderAbout, mount: mountAbout },
   music: { title: 'Music', render: renderMusic },
 };
 const main = document.querySelector('main');
@@ -39,5 +39,11 @@ document.querySelector('.skip-link').addEventListener('click', event => {
   event.preventDefault();
   main.focus();
 });
+const bootLoader = document.querySelector('#boot-loader');
+window.addEventListener('load', () => {
+  window.setTimeout(() => {
+    bootLoader?.classList.add('is-hidden');
+  }, 2000);
+}, { once: true });
 window.addEventListener('hashchange', () => navigate());
 navigate(true);

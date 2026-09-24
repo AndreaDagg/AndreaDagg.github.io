@@ -20,6 +20,23 @@ export function renderLinks() {
             <span class="sr-only"> (si apre in una nuova scheda)</span>
           </a></li>`).join('')}</ul>
       </section>
+      <section class="focus-grid" aria-label="Aree principali del portfolio">
+        <article class="focus-card">
+          <p class="eyebrow muted">01</p>
+          <h2>Software Developer</h2>
+          <p>Sviluppo applicazioni web complete, dal backend alle interfacce frontend, lavorando su architetture, API, database e integrazioni. Mi interessa costruire soluzioni solide, chiare e facilmente manutenibili.</p>
+        </article>
+        <article class="focus-card">
+          <p class="eyebrow muted">02</p>
+          <h2>Music</h2>
+          <p>La musica è uno spazio di espressione e sperimentazione. Suono la chitarra, studio nuove tecniche e porto avanti progetti personali tra cover, registrazioni e contenuti musicali.</p>
+        </article>
+        <article class="focus-card">
+          <p class="eyebrow muted">03</p>
+          <h2>Photo &amp; Video</h2>
+          <p>Fotografia e video sono il mio modo di raccontare luoghi, persone e momenti attraverso le immagini. Mi occupo di scatto, ripresa ed editing, cercando uno stile visivo personale e curato.</p>
+        </article>
+      </section>
       <a class="photo-feature" href="#/photography" aria-label="Esplora il portfolio Photography">
         <img src="${assetUrl(cover?.src ?? 'generated/media/portrait.webp')}"
           ${cover ? `srcset="${srcset(cover, 2560)}" sizes="(max-width: 700px) 92vw, (max-width: 1200px) 46vw, 660px"` : ''}

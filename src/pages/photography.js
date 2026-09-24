@@ -5,7 +5,7 @@ import { assetUrl, escapeHtml, srcset } from '../utils/html';
 
 export function renderPhotography(items = photos) {
   return `<section class="photography-page page-enter" aria-labelledby="page-title">
-    <header class="page-heading"><div><p class="eyebrow accent">02 / Photography</p><h1 id="page-title" tabindex="-1">Il tempo, <em>in un istante.</em></h1></div><p>Una raccolta di sguardi.<br>Luce, dettagli e ciò che resta.</p></header>
+    <header class="page-heading"><div><p class="eyebrow accent">02 / Photography</p><h1 id="page-title" tabindex="-1">Searching, <em>someting to capture.</em></h1></div><p>Una raccolta di sguardi.<br>Luce, dettagli e ciò che resta.</p></header>
     <div class="gallery-heading"><span class="eyebrow">Archivio fotografico</span><span class="eyebrow muted">${String(items.length).padStart(2, '0')} ${items.length === 1 ? 'fotografia' : 'fotografie'}</span></div>
     ${items.length ? `<div class="photo-gallery ${items.length === 1 ? 'photo-gallery--single' : ''}">${items.map((photo, index) => `
       <figure class="photo-item"><button class="photo-button" data-photo="${index}" aria-label="Apri fotografia: ${escapeHtml(photo.title)}" aria-haspopup="dialog">

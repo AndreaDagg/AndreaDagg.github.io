@@ -7,6 +7,10 @@
 .links-intro h1 { font-size: clamp(68px, 6.8vw, 105px); }
 .links-intro h1 em { white-space: nowrap; }
 .intro-description { color: var(--muted); line-height: 1.75; margin-top: 24px; font-size: 14px; }
+.focus-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 42px; }
+.focus-card { padding: 26px 22px; border: 1px solid var(--line); background: rgba(255, 255, 255, 0.015); display: grid; gap: 16px; }
+.focus-card h2 { font-size: clamp(24px, 2vw, 32px); letter-spacing: -.04em; }
+.focus-card p:last-child { color: var(--muted); font-size: 13px; line-height: 1.7; }
 .social-heading { margin: 37px 0 10px; display: flex; justify-content: space-between; }
 .social-links li { border-top: 1px solid var(--line); }
 .social-links li:last-child { border-bottom: 1px solid var(--line); }
@@ -48,6 +52,7 @@
 @media (max-width: 1100px) {
   .links-layout { gap: 38px; padding-top: 40px; }
   .links-intro h1 { font-size: clamp(58px, 7.1vw, 78px); }
+  .focus-grid { grid-template-columns: 1fr; }
   .photo-feature { min-height: 650px; padding: 25px; }
   .social-handle { display: none; }
   .link-arrow { margin-left: auto; }
@@ -60,6 +65,7 @@
   .intro-kicker { margin-bottom: 25px; }
   .links-intro h1 { font-size: clamp(62px, 12vw, 92px); }
   .intro-description { margin-top: 21px; }
+  .focus-grid { margin-top: 28px; }
   .social-heading { margin-top: 32px; }
   .social-links a { min-height: 64px; }
   .social-handle { display: block; }

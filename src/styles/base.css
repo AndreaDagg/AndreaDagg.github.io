@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
 :root {
   color-scheme: dark;
-  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-family: 'Manrope', 'Segoe UI', Arial, sans-serif;
   color: #eeeae2;
   background: #151715;
   font-synthesis: none;
@@ -38,8 +40,49 @@ h1:focus, main:focus { outline: none; }
 .accent { color: var(--accent); }
 .eyebrow { font-size: 10px; line-height: 1.5; letter-spacing: .16em; font-weight: 500; text-transform: uppercase; }
 .icon { width: 22px; height: 22px; flex: 0 0 auto; }
+.boot-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  background: rgba(21, 23, 21, 0.92);
+  backdrop-filter: blur(12px);
+  transition: opacity .45s ease, visibility .45s ease;
+}
+.boot-loader.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.boot-loader-video,
+.wordmark-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.boot-loader-video {
+  width: min(170px, 30vw);
+  height: min(170px, 30vw);
+  filter: drop-shadow(0 0 18px rgba(196, 215, 164, 0.28));
+}
 .site-header { min-height: 110px; display: flex; align-items: center; gap: 32px; border-bottom: 1px solid var(--line); }
-.wordmark { font-size: 28px; font-weight: 600; letter-spacing: -.09em; line-height: 1; min-width: 100px; }
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  min-width: 70px;
+  overflow: hidden;
+  border-radius: 18px;
+}
+.wordmark-video {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+}
 .wordmark-dot { color: var(--accent); }
 .site-header nav { display: flex; align-items: center; justify-content: center; gap: 5px; margin-inline: auto; }
 .site-header nav a { min-height: 44px; display: flex; align-items: center; padding: 10px 18px; color: var(--muted); font-size: 13px; border-radius: 30px; transition: color .2s, background .2s; }
